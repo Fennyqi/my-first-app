@@ -52,3 +52,9 @@ Send an example email:
 ```sh
 python app/email_service.py
 ```
+
+Enlarge a number by 100:
+
+```sh
+python app/my_mod.py
+```

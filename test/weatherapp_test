@@ -1,13 +1,13 @@
 
-from weather_app import fetch_data, get_weather_info, display_forecast, main
+from app.weatherapp import get_weather_info, display_forecast, main
 
-def test_fetch_data():
-    data = fetch_data()
 
-    assert isinstance(data, list)
-    assert len(data) > 0  
-    assert isinstance(data[0], dict)
-    assert set(data[0].keys()) == {"name", "startTime", "shortForecast", "temperature", "temperatureUnit", "icon"}  # Adjust based on your actual data structure
+def test_get_weather_info():
+  
+        assert isinstance(result, list)
+        assert len(result) > 0
+        assert isinstance(result[0], dict)
+        assert set(result[0].keys()) == {"name", "startTime", "shortForecast", "temperature", "temperatureUnit", "icon"}
 
 if __name__ == "__main__":
-    test_fetch_data()
+    test_get_weather_info()

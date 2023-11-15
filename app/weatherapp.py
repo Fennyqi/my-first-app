@@ -3,7 +3,7 @@
 
 import json
 import requests
-from IPython.display import Image, display
+#from IPython.display import Image, display
 from pgeocode import Nominatim
 
 DEGREE_SIGN = u"\N{DEGREE SIGN}"  # Define DEGREE_SIGN
@@ -45,7 +45,7 @@ def display_forecast(periods):
         print("-------------")
         print(period["name"], period["startTime"][0:7])
         print(period["shortForecast"], f"{period['temperature']} {DEGREE_SIGN}{period['temperatureUnit']}")
-        display(Image(url=period["icon"]))
+        #display(Image(url=period["icon"]))
 
 def main():
     print("-----------")
@@ -53,9 +53,9 @@ def main():
     print("-----------")
 
     # Example images
-    display(Image(url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Georgetown_Hoyas_logo.svg/64px-Georgetown_Hoyas_logo.svg.png"))
-    display(Image(url="https://www.python.org/static/community_logos/python-powered-w-200x80.png"))
-    display(Image(url="https://api.weather.gov/icons/land/day/sct?size=medium"))
+    #display(Image(url="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Georgetown_Hoyas_logo.svg/64px-Georgetown_Hoyas_logo.svg.png"))
+    #display(Image(url="https://www.python.org/static/community_logos/python-powered-w-200x80.png"))
+    #display(Image(url="https://api.weather.gov/icons/land/day/sct?size=medium"))
 
     zip_code = input("Please input a zip code (e.g. '06510'): ") or "06510"
     print("ZIP CODE:", zip_code)

@@ -12,6 +12,8 @@ sendgrid==6.5.0
 
 pgeocode
 
+flask
+
 #test
 
 pytest

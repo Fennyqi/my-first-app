@@ -59,6 +59,12 @@ Enlarge a number by 100:
 python app/my_mod.py
 ```
 
+Get weather information:
+
+
+```sh
+python app/weatherapp.py
+```
 ## Testing
 
 Run tests:

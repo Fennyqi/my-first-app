@@ -17,3 +17,7 @@ flask
 #test
 
 pytest
+
+# production serve needs this to run web app
+
+gunicorn

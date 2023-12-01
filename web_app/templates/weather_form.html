@@ -1,0 +1,21 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "weather_form" %}
+
+{% block content %}
+
+    <h2>Weather Form</h2>
+
+    <p>Request weather information by entering a zip code...</p>
+
+    <form action="/weather/dashboard" method="POST">
+
+        <label>Zip Code:</label>
+        <input type="text" name="zip_code" placeholder="Enter Zip Code" value="06510">
+        <br>
+
+        <!-- Optional: Add more input fields as needed -->
+
+        <button class="btn btn-success">Get Weather</button>
+    </form>
+
+{% endblock %}

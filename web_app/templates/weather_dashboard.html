@@ -1,0 +1,25 @@
+{% extends "bootstrap_5_layout.html" %}
+{% set active_page = "weather_dashboard" %}
+
+{% block content %}
+
+    <h2>Weather Dashboard</h2>
+
+    <!-- Add Weather Forecast Display -->
+    <div class="weather-forecast">
+        <h3>Weather Forecast for Zip Code: {{ zip_code }}</h3>
+
+        <!-- Loop through weather periods to display forecast -->
+        <div class="weather-periods">
+            {% for period in periods %}
+                <div class="weather-period">
+                    <p>{{ period.name }} - {{ period.startTime }}</p>
+                    <p>{{ period.shortForecast }}</p>
+                    <p>{{ period.temperature }} </p>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+{% endblock %}

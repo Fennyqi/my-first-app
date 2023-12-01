@@ -3,23 +3,17 @@
 
 {% block content %}
 
-    <h2>Weather Dashboard</h2>
+    <h1>Weather Dashboard</h1>
+    <h2>Weather Forecast for Zip Code: {{ zip_code }}</h2>
 
-    <!-- Add Weather Forecast Display -->
-    <div class="weather-forecast">
-        <h3>Weather Forecast for Zip Code: {{ zip_code }}</h3>
-
-        <!-- Loop through weather periods to display forecast -->
-        <div class="weather-periods">
-            {% for period in periods %}
-                <div class="weather-period">
-                    <p>{{ period.name }} - {{ period.startTime }}</p>
-                    <p>{{ period.shortForecast }}</p>
-                    <p>{{ period.temperature }} </p>
-                </div>
-            {% endfor %}
-        </div>
+    <div class="weather-periods">
+        {% for period in periods %}
+            <div class="weather-period">
+                <p>{{ period.name }} - {{ period.startTime[0:10] }}</p>
+                <p>{{ period.shortForecast }}</p>
+                <p>{{ period.temperature }}{{ DEGREE_SIGN }}{{ period.temperatureUnit }}</p>
+            </div>
+        {% endfor %}
     </div>
-
 
 {% endblock %}

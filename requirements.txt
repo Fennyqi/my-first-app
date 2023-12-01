@@ -12,6 +12,12 @@ sendgrid==6.5.0
 
 pgeocode
 
+flask
+
 #test
 
 pytest
+
+# production serve needs this to run web app
+
+gunicorn
